@@ -178,6 +178,9 @@ else()
   endif()
 endif()
 
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-implicit")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-unknown-warning-option -Wno-shadow")
+
 option(PORTABLE "build a portable binary" OFF)
 option(FORCE_SSE42 "force building with SSE4.2, even when PORTABLE=ON" OFF)
 if(PORTABLE)
